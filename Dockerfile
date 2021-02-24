@@ -20,5 +20,5 @@ RUN  apt-get update \
      && chmod +x /usr/sbin/wait-for-it.sh
 
 # Install Puppeteer under /node_modules so it's available system-wide
-ADD package.json package-lock.json /
-RUN npm install
+ADD package.json yarn.lock/
+RUN yarn --frozen-lockfile
